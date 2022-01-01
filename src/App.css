@@ -1,38 +1,222 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+ 
+}
+.header{
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+.header h1{
+  font-weight:400 ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.postContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 80%;
+  margin: auto;
+}
+
+.singlePost{
+  border: black 1px solid;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 60%;
+  padding: 20px;
+  background-color: #f7f7f7;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-color: white;
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.singlePost h1{
+  font-weight: 500;
+  font-size: 1.7rem;
+  color: rgb(19, 19, 122);
+  
+}
+
+.write {
+  padding-top: 50px;
+  width: 90%;
+}
+
+.writeImg {
+  margin-left: 100px;
+  width: 70vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.writeForm {
+  position: relative;
+}
+
+.writeFormGroup {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.writeIcon {
+  width: 25px;
+  height: 25px;
+  font-size: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  color: rgb(129, 125, 125);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.writeIcon:hover{
+
+  background-color: rgb(129, 125, 125);
+}
+
+.writeInput {
+  font-size: 30px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+
+.writeInput::placeholder {
+  color: rgb(189, 185, 185);
+  font-weight: 400;
+}
+
+.writeInput:focus {
+  outline-style: none;
+}
+
+.writeText {
+  width: 70vw;
+  height: 100vh;
+  font-family: inherit;
+  font-size: 20px;
+}
+
+.writeSubmit {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  color: black;
+  background-color: #f1f1f1;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.writeSubmit:hover{
+  background-color: rgb(49, 49, 49);
+  color: aliceblue;
+}
+.link a{
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  transition: all 0.5s ease;  
+}
+.link a:hover{
+  color: white;
+  
+}
+.link{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border: 1px solid black;
+  border-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+.link:hover{
+  background-color: rgb(209, 209, 209);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#root > div > div.postContainer > h1{
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{
+  background-color:  #f7f7f7;
+  border: aliceblue 1px solid;
+  border-color: none;
+  cursor: pointer;
+}
+.btntext{
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  transition: all 0.5s ease;  
+
+}
+.btn:hover .btntext{
+  visibility: visible;
+  margin-left: -35px;
+  margin-top: 2px;
+  color: rgb(100, 12, 12);
+}
+
+.notshowed {
+  display: none;
+}
+
+.showed {
+  display: block;
+  border:1px solid rgb(196, 193, 193);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+transition: all 0.5s ease;
+
+}
+.showed input{
+  border-radius: 5px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top:5px;
+  border: 1px solid rgb(187, 187, 187);
+  height: 20px;
+}
+
+.showed .updatebtn{
+  background-color: goldenrod;
+  border-radius: 5px;
+  border: 1px solid goldenrod;
+  width: 50%;
+  margin:auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.upbtn{
+  margin-top: 20px;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(194, 194, 194);
+  cursor: pointer;
 }
