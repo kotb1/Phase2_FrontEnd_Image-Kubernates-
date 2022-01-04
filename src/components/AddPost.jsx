@@ -4,12 +4,9 @@ import cover from '../images/cover2.jpg'
 
 function AddPost() {
   const [title, setTitle] = useState('')
-  const [desc, setDesc] = useState('')
-
   const addPost = ()=> {
-    axios.post('http://localhost:5000/addPost', {
+    axios.post('http://localhost:5000/', {
       title:title,
-      desc:desc
       
     })
     .then(
@@ -40,15 +37,6 @@ function AddPost() {
               onChange={(e) => setTitle(e.target.value)
               
               }
-            />
-          </div>
-          <div className="writeFormGroup">
-            <textarea
-              className="writeInput writeText"
-              placeholder="Tell your story..."
-              type="text"
-              autoFocus={true}
-              onChange={(e) => setDesc(e.target.value)}
             />
           </div>
           <button className="writeSubmit" type="submit" onClick={addPost}>
